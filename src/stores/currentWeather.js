@@ -67,7 +67,7 @@ export const useWeatherStore = defineStore('weatherInfo', () => {
         const res = await fetch(`${weatherApiUrl}lat=${location.value.latitude}&lon=${location.value.longitude}&exclude=&appid=${weatherApiKey}`)
         const json = await res.json()
         currentWeather.value = json.current
-        // console.log(currentWeather.value);
+        console.log(currentWeather.value);
 
       } catch (err) {
         console.log("err", err.message);
